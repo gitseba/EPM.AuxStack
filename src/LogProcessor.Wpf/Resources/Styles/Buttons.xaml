@@ -1,0 +1,89 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<!-- Base Button Style -->
+	<Style x:Key="Btn_BaseStyle"
+			 TargetType="{x:Type Button}">
+		<!--By default, the parts of any visual elements that are within the non-client area of the window are not interactive. 
+        To enable interactive elements in the non-client area, attach the IsHitTestVisibleInChrome attached property to the element and set it to true.
+        !Without this enabled, I cannot click Window buttons on top bar -->
+		<Setter Property="WindowChrome.IsHitTestVisibleInChrome"
+				  Value="True" />
+
+		<Setter Property="HorizontalAlignment"
+				  Value="Stretch" />
+		<Setter Property="HorizontalContentAlignment"
+				  Value="Center" />
+		<Setter Property="VerticalAlignment"
+				  Value="Stretch" />
+		<Setter Property="VerticalContentAlignment"
+				  Value="Center" />
+
+		<Setter Property="Height"
+				  Value="Auto" />
+		<Setter Property="Width"
+				  Value="Auto" />
+
+		<Setter Property="BorderThickness"
+				  Value="0" />
+
+		<Style.Triggers>
+			<Trigger Property="IsPressed"
+						Value="True">
+				<Setter Property="RenderTransform">
+					<Setter.Value>
+						<ScaleTransform ScaleX="0.97"
+											 ScaleY="0.97" />
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<!-- Window buttons (maximize, minimize, close...)-->
+	<Style x:Key="Btn_WindowStyle"
+			 TargetType="{x:Type Button}"
+			 BasedOn="{StaticResource Btn_BaseStyle}">
+		<Setter Property="Foreground"
+				  Value="#e2f3f6" />
+		<Setter Property="Background"
+				  Value="Transparent" />
+
+		<Setter Property="Width"
+				  Value="28" />
+
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Border Background="{TemplateBinding Background}"
+							  BorderBrush="{TemplateBinding BorderBrush}"
+							  BorderThickness="{TemplateBinding BorderThickness}"
+							  Padding="{TemplateBinding Padding}">
+						<ContentPresenter HorizontalAlignment="Center"
+												VerticalAlignment="Center" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver"
+						Value="True">
+				<Setter Property="Foreground"
+						  Value="AliceBlue" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<Style x:Key="Btn_WindowDangerStyle"
+			 TargetType="{x:Type Button}"
+			 BasedOn="{StaticResource Btn_WindowStyle}">
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver"
+						Value="True">
+				<Setter Property="Foreground"
+						  Value="Red" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+</ResourceDictionary>

@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						  xmlns:system="clr-namespace:System;assembly=System.Runtime">
+
+
+	<!-- LINKS: https://fontawesome.com/v4/icons/ -->
+	<!--        https://fontawesome.cc/ -->
+
+	<!--Font Awesome Icons-->
+
+	<!--A-->
+	<system:String x:Key="fa-address-book">&#xf2b9;</system:String>
+
+	<!--C-->
+	<system:String x:Key="fa-cogs">&#xf085;</system:String>
+
+	<!--E-->
+	<system:String x:Key="fa-ellipsis-h">&#xf141;</system:String>
+	<system:String x:Key="fa-exclamation">&#xf12a;</system:String>
+
+	<!--F-->
+	<system:String x:Key="fa-folder-open">&#xf07c;</system:String>
+	<system:String x:Key="fa-files-o">&#xf0c5;</system:String>
+	<system:String x:Key="fa-hand-o-up">&#xf0a6;</system:String>
+	<system:String x:Key="fa-filter">&#xf0b0;</system:String>
+
+	<!--M-->
+	<system:String x:Key="fa-compress">&#xf066;</system:String>
+
+	<!--S-->
+	<system:String x:Key="fa-search">&#xf002;</system:String>
+	<system:String x:Key="fa-spinner">&#xf110;</system:String>
+	<system:String x:Key="fa-sign-in">&#xf090;</system:String>
+
+	<!--T-->
+	<system:String x:Key="fa-times">&#xf00d;</system:String>
+
+	<!--W-->
+	<system:String x:Key="fa-window-minimize">&#xf2d1;</system:String>
+	<system:String x:Key="fa-window-maximize">&#xf2d0;</system:String>
+	<system:String x:Key="fa-window-close">&#xf2d3;</system:String>
+
+</ResourceDictionary>

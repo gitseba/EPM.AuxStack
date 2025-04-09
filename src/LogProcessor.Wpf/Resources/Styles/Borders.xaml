@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<!-- Base Border Style -->
+	<Style x:Key="Border_BaseStyle"
+			 TargetType="{x:Type Border}">
+		<Setter Property="Background"
+				  Value="{StaticResource brush-primary-blue}" />
+		<Setter Property="Padding"
+				  Value="1" />
+		<Setter Property="CornerRadius"
+				  Value="6" />
+	</Style>
+
+</ResourceDictionary>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="LogProcessor.Wpf.ShellWindow"
+		  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		  mc:Ignorable="d"
+		  xmlns:local="clr-namespace:LogProcessor.Wpf"
+		  x:Name="ShellWindowParent"
+		  Title="Log Processor"
+		  Style="{StaticResource Window_BaseStyle}"
+		  WindowState="{Binding WindowState}"
+		  WindowStyle="None"
+		  AllowsTransparency="True"
+		  WindowStartupLocation="CenterScreen"
+		  Height="600"
+		  Width="1200"
+		  MinHeight="800"
+		  MinWidth="400">
+
+	<!--Window Chrome => Add resize, drag... functionality to non-client area
+     link: https://docs.microsoft.com/en-us/dotnet/api/system.windows.shell.windowchrome?view=windowsdesktop-6.0-->
+	<WindowChrome.WindowChrome>
+		<WindowChrome ResizeBorderThickness="10"
+						  CaptionHeight="24"
+						  CornerRadius="6"
+						  GlassFrameThickness="10" />
+	</WindowChrome.WindowChrome>
+
+	<Grid>
+
+
+
+	</Grid>
+
+</Window>
