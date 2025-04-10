@@ -4,7 +4,7 @@ namespace LogProcessor.Wpf.Attached;
 
 /// <summary>
 /// Purpose: Attached properties for Textbox elements (Placeholder text)
-/// Created by: sebde
+/// Created by: tseb
 /// </summary>
 public class PlaceholderProperty : BaseAttachedProperty<PlaceholderProperty, string>
 {

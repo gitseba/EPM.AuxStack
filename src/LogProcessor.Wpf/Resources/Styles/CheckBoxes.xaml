@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						  xmlns:attached="clr-namespace:LogProcessor.Wpf.Attached">
+
+	<!-- Base CheckBox Style -->
+	<Style x:Key="Checkbox_BaseStyle"
+			 TargetType="{x:Type CheckBox}">
+		<Setter Property="Height"
+				  Value="30" />
+		<Setter Property="Margin"
+				  Value="2" />
+		<Setter Property="VerticalContentAlignment"
+				  Value="Center" />
+		<Setter Property="HorizontalContentAlignment"
+				  Value="Left" />
+	</Style>
+
+</ResourceDictionary>

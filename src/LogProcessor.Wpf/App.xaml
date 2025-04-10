@@ -13,9 +13,16 @@
 
 				<!--Styles-->
 				<ResourceDictionary Source="/Resources/Styles/Borders.xaml" />
+				<ResourceDictionary Source="/Resources/Styles/TextBlocks.xaml" />
+				<ResourceDictionary Source="/Resources/Styles/TextBoxs.xaml" />
+				<ResourceDictionary Source="/Resources/Styles/ComboBoxes.xaml" />
+				<ResourceDictionary Source="/Resources/Styles/CheckBoxes.xaml" />
 				<ResourceDictionary Source="/Resources/Styles/Buttons.xaml" />
 
 				<ResourceDictionary Source="/Resources/Styles/Windows.xaml" />
+
+				<!--Templates-->
+				<ResourceDictionary Source="/Resources/Templates/ButtonTemplates.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Application.Resources>

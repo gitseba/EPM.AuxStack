@@ -5,6 +5,7 @@
 		  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		  mc:Ignorable="d"
 		  xmlns:local="clr-namespace:LogProcessor.Wpf"
+		  xmlns:views="clr-namespace:LogProcessor.Wpf.Views"
 		  x:Name="ShellWindowParent"
 		  Title="Log Processor"
 		  Style="{StaticResource Window_BaseStyle}"
@@ -27,9 +28,25 @@
 	</WindowChrome.WindowChrome>
 
 	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="250" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
 
+		<Grid Grid.Column="0">
+			<views:FilesView />
+		</Grid>
 
+		<Grid Grid.Column="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
 
+		</Grid>
 	</Grid>
+
 
 </Window>

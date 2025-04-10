@@ -86,4 +86,43 @@
 			</Trigger>
 		</Style.Triggers>
 	</Style>
+
+	<Style x:Key="Btn_IconStyle"
+			 BasedOn="{StaticResource Btn_BaseStyle}"
+			 TargetType="{x:Type Button}">
+		<Setter Property="BorderThickness"
+				  Value="1" />
+		<Setter Property="Height"
+				  Value="36" />
+		<Setter Property="FontFamily"
+				  Value="{StaticResource FontAwesome}" />
+		<Setter Property="FontSize"
+				  Value="{StaticResource Medium}" />
+		<Setter Property="FontFamily"
+				  Value="{StaticResource LatoItalic}" />
+		<Setter Property="Background"
+				  Value="#202020" />
+		<Setter Property="Foreground"
+				  Value="AliceBlue" />
+	</Style>
+
+	<Style x:Key="Btn_IconDangerStyle"
+			 BasedOn="{StaticResource Btn_IconStyle}"
+			 TargetType="{x:Type Button}">
+		<Setter Property="Background"
+				  Value="#202020" />
+		<Setter Property="Foreground"
+				  Value="White" />
+	</Style>
+
+	<Style x:Key="Btn_IconVerticalStyle"
+			 BasedOn="{StaticResource Btn_IconStyle}"
+			 TargetType="{x:Type Button}">
+		<Setter Property="Background"
+				  Value="#202020" />
+		<Setter Property="Foreground"
+				  Value="AliceBlue" />
+		<Setter Property="Height"
+				  Value="52" />
+	</Style>
 </ResourceDictionary>

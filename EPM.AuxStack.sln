@@ -7,6 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Wpf", "src\Log
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Shared", "src\LogProcessor.Shared\LogProcessor.Shared.csproj", "{DFE464D5-7366-4865-B0B2-4BBD3C48F395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Infrastructure", "src\LogProcessor.Infrastructure\LogProcessor.Infrastructure.csproj", "{B495B083-B2DE-4961-B545-E3254104D1BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Infrastructure.Dialogs", "src\LogProcessor.Infrastructure.Dialogs\LogProcessor.Infrastructure.Dialogs.csproj", "{9182B5E6-91F6-497D-9D4B-5C61B2DFB7F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Infrastructure.Files", "src\LogProcessor.Infrastructure.Files\LogProcessor.Infrastructure.Files.csproj", "{25A68903-81B3-4268-A012-C81BA5BD90DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Strategy", "src\LogProcessor.Strategy\LogProcessor.Strategy.csproj", "{A5E96438-F482-4F7B-AC6E-AB0CCE38D03E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Strategy.Metadata", "src\LogProcessor.Strategy.Metadata\LogProcessor.Strategy.Metadata.csproj", "{4BB4B9A5-9890-49BE-BAEF-E0363EF82187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Application", "src\LogProcessor.Application\LogProcessor.Application.csproj", "{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +33,30 @@ Global
 		{DFE464D5-7366-4865-B0B2-4BBD3C48F395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFE464D5-7366-4865-B0B2-4BBD3C48F395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFE464D5-7366-4865-B0B2-4BBD3C48F395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B495B083-B2DE-4961-B545-E3254104D1BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B495B083-B2DE-4961-B545-E3254104D1BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B495B083-B2DE-4961-B545-E3254104D1BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B495B083-B2DE-4961-B545-E3254104D1BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9182B5E6-91F6-497D-9D4B-5C61B2DFB7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9182B5E6-91F6-497D-9D4B-5C61B2DFB7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9182B5E6-91F6-497D-9D4B-5C61B2DFB7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9182B5E6-91F6-497D-9D4B-5C61B2DFB7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25A68903-81B3-4268-A012-C81BA5BD90DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25A68903-81B3-4268-A012-C81BA5BD90DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25A68903-81B3-4268-A012-C81BA5BD90DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25A68903-81B3-4268-A012-C81BA5BD90DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E96438-F482-4F7B-AC6E-AB0CCE38D03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E96438-F482-4F7B-AC6E-AB0CCE38D03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E96438-F482-4F7B-AC6E-AB0CCE38D03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E96438-F482-4F7B-AC6E-AB0CCE38D03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB4B9A5-9890-49BE-BAEF-E0363EF82187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB4B9A5-9890-49BE-BAEF-E0363EF82187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB4B9A5-9890-49BE-BAEF-E0363EF82187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB4B9A5-9890-49BE-BAEF-E0363EF82187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

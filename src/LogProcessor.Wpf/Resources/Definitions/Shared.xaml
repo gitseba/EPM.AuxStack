@@ -8,6 +8,7 @@
 		<ResourceDictionary Source="Colors.xaml" />
 		<ResourceDictionary Source="Fa_Icons.xaml" />
 		<ResourceDictionary Source="Fonts.xaml" />
+		<ResourceDictionary Source="Times.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

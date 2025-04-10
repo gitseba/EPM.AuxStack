@@ -4,7 +4,9 @@
 
 	<!--Font Family-->
 	<FontFamily x:Key="FontAwesome">/Resources/Fonts/#FontAwesome</FontFamily>
-
+	<FontFamily x:Key="LatoItalic">/Resources/Fonts/#Lato Italic</FontFamily>
+	<FontFamily x:Key="LatoBold">/Resources/Fonts/#Lato Bold</FontFamily>
+	
 	<!--Font Size-->
 	<system:Double x:Key="xxSmall">6</system:Double>
 	<system:Double x:Key="xSmall">8</system:Double>

@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <None Remove="Resources\Fonts\fontawesome-webfont.ttf" />
+    <None Remove="Resources\Fonts\Lato-Bold.ttf" />
+    <None Remove="Resources\Fonts\Lato-Italic.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,11 +25,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LogProcessor.Application\LogProcessor.Application.csproj" />
+    <ProjectReference Include="..\LogProcessor.Infrastructure.Dialogs\LogProcessor.Infrastructure.Dialogs.csproj" />
+    <ProjectReference Include="..\LogProcessor.Infrastructure.Files\LogProcessor.Infrastructure.Files.csproj" />
+    <ProjectReference Include="..\LogProcessor.Infrastructure\LogProcessor.Infrastructure.csproj" />
     <ProjectReference Include="..\LogProcessor.Shared\LogProcessor.Shared.csproj" />
+    <ProjectReference Include="..\LogProcessor.Strategy.Metadata\LogProcessor.Strategy.Metadata.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\Fonts\fontawesome-webfont.ttf" />
+    <Resource Include="Resources\Fonts\Lato-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Lato-Italic.ttf" />
   </ItemGroup>
 
 </Project>

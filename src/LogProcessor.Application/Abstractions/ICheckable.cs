@@ -1,4 +1,4 @@
-﻿namespace LogProcessor.Shared.Abstractions;
+﻿namespace LogProcessor.Application.Abstractions;
 
 /// <summary>
 /// Purpose: Represent elements/models that can be checked (E.g. in Ui)
