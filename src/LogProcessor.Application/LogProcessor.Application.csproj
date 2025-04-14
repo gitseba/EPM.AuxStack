@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LogProcessor.Shared\LogProcessor.Shared.csproj" />
+    <ProjectReference Include="..\LogProcessor.Strategy\LogProcessor.Strategy.csproj" />
   </ItemGroup>
 
 </Project>

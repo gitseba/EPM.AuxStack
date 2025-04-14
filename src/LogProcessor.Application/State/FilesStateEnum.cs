@@ -6,7 +6,8 @@
 /// </summary>
 public enum FilesStateEnum
 {
-    RootPathSelected, // source directory path where files exist
-    FilePathSelected, // path of the selected file
-    FileMetadata      // metadata details about content
+    RootPathSelected,   // source directory path where files exist
+    FilePathSelected,   // path of the selected file
+    FileMetadata,       // metadata details about content
+    Clear               // Files are cleared from list
 }

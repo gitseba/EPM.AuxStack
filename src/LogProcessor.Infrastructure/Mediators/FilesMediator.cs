@@ -38,7 +38,7 @@ public class FilesMediator : IFilesMediator
     /// </summary>
     /// <param name="stateOption">Available Option to subscribe to</param>
     /// <param name="action">Actino to be triggered when subscribed state changes</param>
-    public void StateManagerSubscription(FilesStateEnum stateOption, Action<object> action)
+    public void Subscribe(FilesStateEnum stateOption, Action<object> action)
     {
         ArgumentNullException.ThrowIfNull(action);
         _fileStateManager.StateSubscription(stateOption, action);
@@ -66,6 +66,9 @@ public class FilesMediator : IFilesMediator
         string path, string extension, int maxRecursionDepth,
         [EnumeratorCancellation] CancellationToken ctsToken = default)
     {
+        EventGlobalInstance.Instance.Event<RootPathSelectedEvent>()
+              .Publish(new RootPathSelectedEvent() { Path = path });
+
         var results = _fileProvider.GetUniqueFilesAsync(path, extension, maxRecursionDepth: maxRecursionDepth, ctsToken);
 
         await foreach (var file in results)
@@ -80,15 +83,24 @@ public class FilesMediator : IFilesMediator
     public async Task SelectedAsync(string filePath,
         [EnumeratorCancellation] CancellationToken ctsToken = default)
     {
-        EventGlobalInstance.Instance.Event<FileSelectedEvent>()
+         EventGlobalInstance.Instance.Event<FileSelectedEvent>()
                .Publish(new FileSelectedEvent() { FilePath = filePath });
 
         // Process file metadata
         var metadata = await _fileMetadataService.ProcessAsync(filePath, ctsToken);
         if (metadata.Count != 0)
         {
-            EventGlobalInstance.Instance.Event<FileMetadataUpdateEvent>()
+             EventGlobalInstance.Instance.Event<FileMetadataUpdateEvent>()
                .Publish(new FileMetadataUpdateEvent() { Metadata = metadata.ToDictionary(kvp => kvp.Key.ToString(), kvp => kvp.Value) });
         }
+    }
+
+    /// <summary>
+    /// Notify state manager about clearing the files
+    /// </summary>
+    public void ClearFiles()
+    {
+        EventGlobalInstance.Instance.Event<FilesClearEvent>()
+              .Publish(new FilesClearEvent());
     }
 }

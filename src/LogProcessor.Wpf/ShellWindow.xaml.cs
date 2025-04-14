@@ -15,6 +15,6 @@ public partial class ShellWindow : Window
 
         // Resizing shell window, without this class, it's expanding screen edges.
         // This class keeps the shell betwen screen boundaries.
-        _ = new WindowResizer(this);
+        new WindowResizer(this);
     }
 }

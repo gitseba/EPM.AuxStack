@@ -33,7 +33,7 @@ public class MetadataViewModel : BaseViewModel
     public void InitialLoad()
     {
         // Events
-        _filesMediator.StateManagerSubscription(stateOption: FilesStateEnum.FileMetadata,
+        _filesMediator.Subscribe(stateOption: FilesStateEnum.FileMetadata,
             action: (metadata) => UpdateMetadata((Dictionary<string, string>)metadata));
     }
 

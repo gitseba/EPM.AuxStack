@@ -1,5 +1,6 @@
 ﻿using LogProcessor.Application.Abstractions;
-using LogProcessor.Application.State;
+using LogProcessor.DisplayCapability.Abstractions;
+using LogProcessor.DisplayCapability.Services;
 using LogProcessor.Infrastructure.Dialogs.Services;
 using LogProcessor.Infrastructure.Files.Services;
 using LogProcessor.Infrastructure.Mediators;
@@ -19,7 +20,6 @@ public partial class App : PrismApplication
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
         // Singletons
-        containerRegistry.RegisterSingleton<FilesStateManager>();
 
         // Services
         containerRegistry.Register<IFileProviderService, FileProviderService>();
@@ -27,6 +27,11 @@ public partial class App : PrismApplication
 
         containerRegistry.Register<IFilesMediator, FilesMediator>();
         containerRegistry.Register<IFileMetadataService, FileMetadataService>();
+
+        containerRegistry.Register<IStrategyMediator, StrategyMediator>();
+
+        containerRegistry.Register<IDisplayCapabilityService, DisplayCapabilityService>();
+
 
         // Models
     }
@@ -40,6 +45,8 @@ public partial class App : PrismApplication
         // Components
         ViewModelLocationProvider.Register<FilesView, FilesViewModel>();
         ViewModelLocationProvider.Register<MetadataView, MetadataViewModel>();
+        ViewModelLocationProvider.Register<StrategiesView, StrategiesViewModel>();
+        ViewModelLocationProvider.Register<DisplayView, DisplayViewModel>();
 
         // Windows
         ViewModelLocationProvider.Register<ShellWindow, ShellViewModel>();

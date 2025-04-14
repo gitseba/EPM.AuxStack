@@ -9,7 +9,7 @@ namespace LogProcessor.Application.State;
 /// </summary>
 public class FilesStateManager
 {
-    public Dictionary<FilesStateEnum, List<Action<object>>> StateManager { get; } = new();
+    public Dictionary<FilesStateEnum, List<Action<object>>> StateManager { get; } = [];
 
     public FilesStateManager()
     {
@@ -22,11 +22,17 @@ public class FilesStateManager
     private void RegisterSubscriptionEvents()
     {
         // Event subscriptions from Mediator
+        EventGlobalInstance.Instance.Event<RootPathSelectedEvent>()
+              .Subscribe(async (ev) => SelectedRootPath = ev.Path);
+
         EventGlobalInstance.Instance.Event<FileSelectedEvent>()
-               .Subscribe((ev) => SelectedFilePath = ev.FilePath);
+               .Subscribe(async (ev) => SelectedFilePath = ev.FilePath);
 
         EventGlobalInstance.Instance.Event<FileMetadataUpdateEvent>()
-               .Subscribe((ev) => Metadata = ev.Metadata);
+               .Subscribe(async(ev) => Metadata = ev.Metadata);
+
+        EventGlobalInstance.Instance.Event<FilesClearEvent>()
+             .Subscribe(async(ev) => Reset());
     }
 
     /// <summary>
@@ -66,9 +72,10 @@ public class FilesStateManager
     /// </summary>
     public void Reset()
     {
-        SelectedRootPath = string.Empty;
+        _selectedRootPath = string.Empty;
         SelectedFilePath = string.Empty;
         Metadata = null;
+        IsClear = true;
     }
 
     /// <summary>
@@ -110,5 +117,15 @@ public class FilesStateManager
     {
         get => _metadata;
         set => UpdateState(FilesStateEnum.FileMetadata, ref _metadata, value);
+    }
+
+    /// <summary>
+    /// Represent metadata content of a file
+    /// </summary>
+    private bool _isClear;
+    public bool IsClear
+    {
+        get => _isClear;
+        set => UpdateState(FilesStateEnum.Clear, ref _isClear, value);
     }
 }

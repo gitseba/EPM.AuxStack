@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Strategy.Metad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Application", "src\LogProcessor.Application\LogProcessor.Application.csproj", "{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.DisplayCapability", "src\LogProcessor.DisplayCapability\LogProcessor.DisplayCapability.csproj", "{D3479D91-6B4B-4DA8-B51C-F73AA165D39E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{930F7AF1-80F6-4BC2-9C06-5D6248A2C61C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3479D91-6B4B-4DA8-B51C-F73AA165D39E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3479D91-6B4B-4DA8-B51C-F73AA165D39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3479D91-6B4B-4DA8-B51C-F73AA165D39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3479D91-6B4B-4DA8-B51C-F73AA165D39E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

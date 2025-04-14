@@ -1,4 +1,6 @@
-﻿namespace LogProcessor.Strategy.Models;
+﻿using LogProcessor.Strategy.Abstractions;
+
+namespace LogProcessor.Strategy.Models;
 
 /// <summary>
 /// Purpose: 
@@ -6,6 +8,16 @@
 /// </summary>
 public class ProcessedModel
 {
+    /// <summary>
+    /// Strategy used to process
+    /// </summary>
+    public IStrategy Strategy { get; set; }
+
+    /// <summary>
+    /// Selected Option for processing
+    /// </summary>
+    public object SelectedOption { get; set; }
+
     /// <summary>
     /// Lines that were processed from file
     /// </summary>

@@ -14,7 +14,7 @@
 		  AllowsTransparency="True"
 		  WindowStartupLocation="CenterScreen"
 		  Height="600"
-		  Width="1200"
+		  Width="1400"
 		  MinHeight="800"
 		  MinWidth="400">
 
@@ -44,7 +44,9 @@
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
-
+			
+			<views:StrategiesView Grid.Row="0" />
+			<views:DisplayView Grid.Row="1" />
 		</Grid>
 	</Grid>
 

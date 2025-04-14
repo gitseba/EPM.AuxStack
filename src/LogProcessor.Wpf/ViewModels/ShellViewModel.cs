@@ -1,6 +1,6 @@
-﻿using System.Windows;
+﻿using LogProcessor.Wpf.Commands;
+using System.Windows;
 using System.Windows.Input;
-using LogProcessor.Wpf.Commands;
 
 namespace LogProcessor.Wpf.ViewModels;
 
@@ -19,6 +19,7 @@ public class ShellViewModel : BaseViewModel
             WindowState = (WindowState == WindowState.Maximized) ? WindowState.Normal : WindowState.Maximized;
         });
         ExitCommand = new RelayCommand((p) => (p as Window)?.Close());
+
     }
 
     #region Binding properties

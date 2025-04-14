@@ -1,14 +1,11 @@
 ﻿using LogProcessor.Application.Abstractions;
-using LogProcessor.Application.EventModels;
 using LogProcessor.Application.State;
 using LogProcessor.Shared;
 using LogProcessor.Shared.Extensions;
 using LogProcessor.Shared.Models;
 using LogProcessor.Wpf.Commands;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
-using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Threading;
 
@@ -76,7 +73,7 @@ public class FilesViewModel : BaseViewModel
         // Events
         Files.CollectionChanged += (s, e) => { IsCheckAll = Files.Count == 0; };
 
-        _filesMediator.StateManagerSubscription(stateOption: FilesStateEnum.RootPathSelected,
+        _filesMediator.Subscribe(stateOption: FilesStateEnum.RootPathSelected,
           action: (rootPath) => RootPathSelected = rootPath.ToString() ?? string.Empty);
     }
 
@@ -211,6 +208,11 @@ public class FilesViewModel : BaseViewModel
     {
         Files.CheckAll(true);
         Files.RemoveChecked();
+
+        if (Files?.Count == 0)
+        {
+            _filesMediator.ClearFiles();
+        }
     }
 
     /// <summary>
@@ -221,10 +223,12 @@ public class FilesViewModel : BaseViewModel
         // Clear was pressed but no item was selected
         if (!Files.Any(x => x.IsChecked)) return;
 
-        var checkedFiles = Files.Where(f => f.IsChecked).Select(f => f.FileModel.Path).ToArray();
+        var checkedFiles = Files.Where(f => f.IsChecked).Select(f => f.FileModel?.Path).ToArray();
 
         if (Files.All(f => f.IsChecked)) OnClearAll();
 
         Files.RemoveChecked();
+
+        _filesMediator.ClearFiles();
     }
 }

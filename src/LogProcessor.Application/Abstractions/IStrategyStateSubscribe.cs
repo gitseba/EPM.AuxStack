@@ -6,7 +6,7 @@ namespace LogProcessor.Application.Abstractions;
 /// Purpose: 
 /// Created by: tseb
 /// </summary>
-public interface IStateManagerSubscribe
+public interface IStrategyStateSubscribe
 {
-    void StateManagerSubscription(FilesStateEnum stateOption, Action<object> action);
+    void Subscribe(StrategyStateEnum stateOption, Action<object> action);
 }
